@@ -1,1 +1,50 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
+
+body {
+  background-color: green;
+}
+
+.custom-card {
+  width: 150px;
+  height: 200px;
+  border: 1px solid black;
+  border-radius: 10px;
+  position: relative;
+}
+
+.heart,
+.diamond {
+  color: red;
+}
+.heart > .top-suit::before,
+.heart > .bottom-suit::before {
+  content: "♥";
+}
+.diamond > .top-suit::before,
+.diamond > .bottom-suit::before {
+  content: "♦";
+}
+.spade,
+.club {
+  color: black;
+}
+.spade > .top-suit::before,
+.spade > .bottom-suit::before {
+  content: "♠";
+}
+.club > .top-suit::before,
+.club > .bottom-suit::before {
+  content: "♣";
+}
+
+.bottom-suit {
+  transform: rotate(180deg);
+}
+
+.number {
+  color: black;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
